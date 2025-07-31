@@ -6,7 +6,7 @@ params.times = 1
 params.forks = 1
 
 process foo {
-  machineType 'bar'
+//  machineType 'bar'
   maxForks params.forks
   input: val(x)
   /
