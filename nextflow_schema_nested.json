@@ -38,8 +38,5 @@
     {
       "$ref": "#/$defs/shallow"
     },
-    {
-      "$ref": "#/$defs/deeply"
-    }
   ]
 }
