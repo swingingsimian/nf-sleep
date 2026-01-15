@@ -26,9 +26,14 @@
         "thisIsNested": {
           "type": "object",
           "properties": {
-            "deep": {
+            "deep_tracked": {
               "type": "number",
               "default": 2
+            },
+            "deep_non_tracked": {
+              "type": "number",
+              "default": 2,
+              "track_changes": false
             }
           }
         }
