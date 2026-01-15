@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com///nextflow_schema.json",
+  "title": " pipeline parameters",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "timeout": {
+      "type": "string"
+    },
+    "exit": {
+      "type": "string"
+    },
+    "cmd": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "time": {
+      "title": "time",
+      "type": "object",
+      "description": "",
+      "default": "",
+      "properties": {
+        "times": {
+          "type": "string",
+          "default": "5"
+        }
+      }
+    },
+    "fork": {
+      "title": "fork",
+      "type": "object",
+      "description": "",
+      "default": "",
+      "properties": {
+        "forks": {
+          "type": "string",
+          "default": "2",
+          "track_changes": false
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/time"
+    },
+    {
+      "$ref": "#/$defs/fork"
+    }
+  ]
+}
