@@ -40,16 +40,15 @@
       "default": "",
       "properties": {
         "deeper": {
-	  "type": "object",
-	    "properties": {
-	      "deeply_nested": {
-          	"type": "number",
-          	"default": 2
-              }
+	        "type": "object",
+	        "properties": {
+	          "deeply_nested": {
+              "type": "number",
+              "default": 2
+            }
+	        }
+	      }
 	    }
-	  }
-	}
-      }
     }
   },
   "allOf": [
