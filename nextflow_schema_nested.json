@@ -24,12 +24,9 @@
       "type": "object",
       "properties": {
         "thisIsNested": {
-          // Annotation for the --thisIsNested parameter
-          "type": "object", // Parameters that contain subparameters need to have the "object" type
+          "type": "object",
           "properties": {
-            // Add other parameters in here
             "deep": {
-              // Annotation for the --thisIsNested.deep parameter
               "type": "number",
               "default": 2
             }
