@@ -22,30 +22,42 @@
     }
   },
   "$defs": {
-    "new_group_1": {
-      "type": "string",
-      "default": "2",
-      "title": "new_group_1",
+    "shallow": {
+      "type": "number",
+      "default": 2,
+      "title": "shallow",
       "properties": {
-        "nested": {
-          "type": "string",
-          "default": "2"
-	},
-       "deeply": {
-         "type": "object",
-	  "properties": {
-            "nested": {
-              "type": "string",
-              "default": "3"
-            }
+        "shallow_nested": {
+          "type": "number",
+          "default": 3
+        }
+      }
+    },
+    "deeply": {
+      "title": "deeply",
+      "type": "object",
+      "description": "",
+      "default": "",
+      "properties": {
+        "deeper": {
+	  "type": "object",
+	    "properties": {
+	      "deeply_nested": {
+          	"type": "number",
+          	"default": 2
+              }
+	    }
 	  }
-	} 
+	}
       }
     }
   },
   "allOf": [
     {
-      "$ref": "#/$defs/new_group_1"
+      "$ref": "#/$defs/shallow"
+    },
+    {
+      "$ref": "#/$defs/deeply"
     }
   ]
 }
