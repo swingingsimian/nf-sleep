@@ -13,41 +13,50 @@
     },
     "cmd": {
       "type": "string"
+    },
+    "times": {
+      "type": "string"
+    },
+    "forks": {
+      "type": "string"
     }
   },
   "$defs": {
-    "time": {
-      "title": "time",
-      "type": "object",
-      "description": "",
-      "default": "",
+    "shallow": {
+      "type": "number",
+      "default": 2,
+      "title": "shallow",
       "properties": {
-        "times": {
-          "type": "string",
-          "default": "5"
+        "shallow_nested": {
+          "type": "number",
+          "default": 3
         }
       }
     },
-    "fork": {
-      "title": "fork",
+    "deeply": {
+      "title": "deeply",
       "type": "object",
       "description": "",
       "default": "",
       "properties": {
-        "forks": {
-          "type": "string",
-          "default": "2",
-          "track_changes": false
-        }
-      }
+        "deeper": {
+	        "type": "object",
+	        "properties": {
+	          "deeply_nested": {
+              "type": "number",
+              "default": 2
+            }
+	        }
+	      }
+	    }
     }
   },
   "allOf": [
     {
-      "$ref": "#/$defs/time"
+      "$ref": "#/$defs/shallow"
     },
     {
-      "$ref": "#/$defs/fork"
+      "$ref": "#/$defs/deeply"
     }
   ]
 }
