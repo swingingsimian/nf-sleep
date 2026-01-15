@@ -34,6 +34,20 @@
               "type": "number",
               "default": 2,
               "track_changes": false
+            },
+            "thisIsDeeperNested": {
+              "type": "object",
+              "properties": {
+                "deeper_tracked": {
+                  "type": "number",
+                  "default": 2
+                },
+                "deeper_non_tracked": {
+                  "type": "number",
+                  "default": 2,
+                  "track_changes": false
+                }
+              }
             }
           }
         }
