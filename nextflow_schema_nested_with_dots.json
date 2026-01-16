@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com///nextflow_schema.json",
+  "title": " pipeline parameters",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "timeout": {
+      "type": "string"
+    },
+    "exit": {
+      "type": "string"
+    },
+    "cmd": {
+      "type": "string"
+    },
+    "times": {
+      "type": "string"
+    },
+    "forks": {
+      "type": "string"
+    },
+    "nested": {
+      "type": "object",
+      "properties": {
+        "thisIsNested.deep_tracked": {
+          "type": "number",
+          "default": 2
+        },
+        "thisIsNested.deep_non_tracked": {
+          "type": "number",
+          "default": 2,
+          "track_changes": false
+        }
+      }
+    }
+  }
+}
