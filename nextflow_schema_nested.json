@@ -28,8 +28,7 @@
           "properties": {
             "deep_tracked": {
               "type": "number",
-              "default": 100,
-              "track_changes": false
+              "default": 100
             },
             "deep_non_tracked": {
               "type": "number",
@@ -41,8 +40,7 @@
               "properties": {
                 "deeper_tracked": {
                   "type": "number",
-                  "default": 2,
-                  "track_changes": false
+                  "default": 2
                 },
                 "deeper_non_tracked": {
                   "type": "number",
