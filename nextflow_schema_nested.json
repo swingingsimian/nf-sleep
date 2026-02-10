@@ -28,7 +28,7 @@
           "properties": {
             "deep_tracked": {
               "type": "number",
-              "default": 2
+              "default": 100
             },
             "deep_non_tracked": {
               "type": "number",
